@@ -1,0 +1,339 @@
+
+.aboutSection {
+  position: relative;
+  overflow: hidden;
+  padding: 100px 0;
+  background: #fffaf2;
+  color: #382317;
+}
+
+.aboutContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: clamp(40px, 7vw, 100px);
+  width: min(1240px, 90%);
+  margin: 0 auto;
+}
+
+.aboutImageWrapper {
+  position: relative;
+  min-width: 0;
+  animation: imageReveal 0.8s ease both;
+}
+
+.aboutImage {
+  display: block;
+  width: 100%;
+  height: 600px;
+  border-radius: 18px;
+  object-fit: cover;
+  box-shadow: 0 24px 60px rgba(56, 35, 23, 0.14);
+}
+
+.imageBadge {
+  position: absolute;
+  right: -24px;
+  bottom: 32px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 24px;
+  border: 1px solid rgba(101, 53, 30, 0.1);
+  border-radius: 14px;
+  background: #fffaf2;
+  box-shadow: 0 12px 35px rgba(56, 35, 23, 0.12);
+  animation: badgeFloat 4s ease-in-out infinite;
+}
+
+.badgeIcon {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border-radius: 50%;
+  background: #f1dfc9;
+  font-size: 1.5rem;
+}
+
+.imageBadge strong,
+.imageBadge small {
+  display: block;
+}
+
+.imageBadge strong {
+  margin-bottom: 4px;
+  color: #382317;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.1rem;
+}
+
+.imageBadge small {
+  color: #80664f;
+  font-size: 0.8rem;
+}
+
+.aboutContent {
+  animation: contentReveal 0.8s ease both;
+  animation-delay: 0.15s;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 18px;
+  color: #9a5b2d;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+}
+
+.aboutContent h2 {
+  margin: 0 0 24px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2.5rem, 4.5vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+  text-wrap: balance;
+}
+
+.aboutContent h2 span {
+  color: #9a5b2d;
+  font-style: italic;
+}
+
+.aboutDescription {
+  max-width: 580px;
+  margin: 0 0 16px;
+  color: #806f60;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.highlightGrid {
+  display: grid;
+  gap: 14px;
+  margin: 30px 0;
+}
+
+.highlightCard {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid rgba(115, 78, 49, 0.1);
+  border-radius: 12px;
+  background: #f8efe3;
+  animation: contentReveal 0.55s ease both;
+  animation-delay: calc(var(--card-index, 0) * 100ms);
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.highlightCard:hover {
+  transform: translateX(5px);
+  background: #f1e2cf;
+}
+
+.highlightIcon {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  place-items: center;
+  border-radius: 50%;
+  background: #fffaf2;
+  font-size: 1.35rem;
+}
+
+.highlightCard h3 {
+  margin: 0 0 5px;
+  color: #382317;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.highlightCard p {
+  margin: 0;
+  color: #806f60;
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.aboutButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  min-height: 54px;
+  padding: 0 28px;
+  border: 1px solid #65351e;
+  border-radius: 999px;
+  background: #65351e;
+  color: #fff8ed;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.aboutButton span {
+  font-size: 1.2rem;
+  transition: transform 0.25s ease;
+}
+
+.aboutButton:hover {
+  transform: translateY(-3px);
+  background: #4c2918;
+  color: #fff8ed;
+}
+
+.aboutButton:hover span {
+  transform: translateX(5px);
+}
+
+@keyframes imageReveal {
+  from {
+    opacity: 0;
+    transform: translateX(-25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes contentReveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes badgeFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@media (max-width: 900px) {
+  .aboutSection {
+    padding: 76px 0;
+  }
+
+  .aboutContainer {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    width: min(700px, 88%);
+  }
+
+  .aboutImage {
+    height: 460px;
+  }
+
+  .imageBadge {
+    right: 16px;
+  }
+
+  .aboutContent h2 {
+    font-size: clamp(2.5rem, 7vw, 4rem);
+  }
+}
+
+@media (max-width: 600px) {
+  .aboutSection {
+    padding: 58px 0;
+  }
+
+  .aboutContainer {
+    width: calc(100% - 36px);
+    gap: 36px;
+  }
+
+  .aboutImage {
+    height: 350px;
+    border-radius: 14px;
+  }
+
+  .imageBadge {
+    right: 10px;
+    bottom: 16px;
+    gap: 10px;
+    padding: 12px 15px;
+  }
+
+  .badgeIcon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+
+  .imageBadge strong {
+    font-size: 0.95rem;
+  }
+
+  .imageBadge small {
+    font-size: 0.7rem;
+  }
+
+  .aboutContent h2 {
+    font-size: clamp(2.2rem, 10vw, 3.2rem);
+  }
+
+  .aboutDescription {
+    font-size: 0.94rem;
+  }
+
+  .highlightCard {
+    align-items: flex-start;
+    padding: 14px;
+  }
+
+  .highlightIcon {
+    width: 42px;
+    height: 42px;
+    flex-basis: 42px;
+    font-size: 1.15rem;
+  }
+
+  .highlightCard p {
+    font-size: 0.82rem;
+  }
+
+  .aboutButton {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aboutImageWrapper,
+  .aboutContent,
+  .highlightCard {
+    animation: none;
+  }
+
+  .imageBadge {
+    animation: none;
+  }
+
+  .highlightCard,
+  .aboutButton,
+  .aboutButton span {
+    transition: none;
+  }
+
+  .highlightCard:hover,
+  .aboutButton:hover {
+    transform: none;
+  }
+}
