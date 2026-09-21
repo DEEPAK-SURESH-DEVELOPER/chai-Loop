@@ -74,7 +74,7 @@ const Header = () => {
           aria-label="Chai Loop Cafe home"
         >
           <span  aria-hidden="true">
-                <img src="https://img.magnific.com/free-vector/isolated-indian-tea-chai-glass_1017-53966.jpg?semt=ais_hybrid&w=740&q=80" style={{width:"50px"}} alt="Chai Loop Cafe logo" />
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/035/108/040/small_2x/chai-time-text-with-indian-tea-glass-illustration-free-vector.jpg" style={{width:"50px"}} alt="Chai Loop Cafe logo" />
           </span>
           <span className={styles.brandText}>
             <span className={styles.brandName}>Chai Loop</span>
