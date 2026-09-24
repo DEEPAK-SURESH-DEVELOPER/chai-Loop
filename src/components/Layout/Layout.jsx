@@ -14,15 +14,14 @@ const Layout = () => {
     <>
       <Header />
       <main>
-        <Home/>
-        <ChaiPoster/>
-        <Menu/>
-        <About/>
-        <Gallery/>
-        <Visit/>
-        <Footer/>
+        <Home />
+        <ChaiPoster />
+        <Menu />
+        <About />
+        <Gallery />
+        <Visit />
       </main>
-      
+      <Footer />
     </>
   )
 }

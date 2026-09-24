@@ -1,0 +1,44 @@
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #c58b45 #1c1712;
+}
+
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1c1712;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    #e5b56c,
+    #9c622e
+  );
+  border-radius: 20px;
+  border: 2px solid #1c1712;
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    180deg,
+    #f5d49b,
+    #c58b45
+  );
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import styles from './Header.module.css'
+import { FaSquareArrowUpRight } from 'react-icons/fa6'
 
 const navLinks = [
   { label: 'Home', href: '#home' },
@@ -105,7 +106,7 @@ const Header = () => {
             onClick={closeMenu}
           >
             <span>Order Now</span>
-            <span aria-hidden="true">↗</span>
+            <span aria-hidden="true"><FaSquareArrowUpRight /></span>
           </Link>
 
           <button
