@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const axiousInstance = axios.create({
-    baseURL: 'http://localhost:4244',
+    baseURL: 'https://chai-loop-backend.onrender.com',
     timeout: 5000
 })
 
